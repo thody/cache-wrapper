@@ -1,0 +1,20 @@
+{
+  "name": "caching-proxy",
+  "version": "0.0.0",
+  "description": "Wraps objects with a caching layer so that resource intensive functions can be called repeatedly at low performance cost.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec test"
+  },
+  "keywords": [
+    "cache"
+  ],
+  "author": "Adam Thody",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  },
+  "dependencies": {
+    "memory-cache": "0.0.5"
+  }
+}
