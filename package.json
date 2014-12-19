@@ -4,7 +4,7 @@
   "description": "Wraps objects with a caching layer so that resource intensive functions can be called repeatedly at low performance cost.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec test",
+    "test": "mocha --reporter spec test && ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000",
     "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000"
   },
   "keywords": [
