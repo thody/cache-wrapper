@@ -45,10 +45,7 @@ describe('Cache Wrapper', function () {
 
     it('should be able to wrap an individual function', function () {
       var spy = sinon.spy();
-      var proxiedFunction = cacheWrapper.wrap(function (spy) {
-        spy();
-        return 1;
-      });
+      var proxiedFunction = cacheWrapper.wrap(fakeResource.getStuff);
 
       proxiedFunction(spy); // Call underlying method
       proxiedFunction(spy); // Hit cache
