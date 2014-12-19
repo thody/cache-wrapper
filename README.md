@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/thody/cache-wrapper.svg?branch=master)](https://travis-ci.org/thody/cache-wrapper)
+[![Build Status](https://img.shields.io/travis/thody/cache-wrapper.svg)](https://travis-ci.org/thody/cache-wrapper)
 [![Dependency Status](https://gemnasium.com/thody/cache-wrapper.svg)](https://gemnasium.com/thody/cache-wrapper)
 
 ## Installation
