@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/thody/caching-proxy.svg?branch=master)](https://travis-ci.org/thody/caching-proxy)
 [![Dependency Status](https://gemnasium.com/thody/caching-proxy.svg)](https://gemnasium.com/thody/caching-proxy)
+[![Coverage Status](https://img.shields.io/coveralls/thody/caching-proxy.svg)](https://coveralls.io/r/thody/caching-proxy)
 
 ## Usage 
 
