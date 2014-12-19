@@ -1,6 +1,6 @@
 {
   "name": "cache-wrapper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Wraps objects with a proxy that caches return values so that resource intensive functions can be called repeatedly at low performance cost.",
   "author": "Adam Thody",
   "repository": {
@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/thody/cache-wrapper/issues"
   },
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha --reporter spec test && ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000",
     "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000"
