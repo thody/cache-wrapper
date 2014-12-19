@@ -7,6 +7,9 @@
 
 ## Usage 
 
+The example below shows how you can use cache-wrapper to wrap a resource intensive/slow data store object, so that
+repeat calls to its methods with the same arguments will use a cached response from the first call.
+
 ```
 var cacheWrapper = require('cache-wrapper');
 var dataStore = {
