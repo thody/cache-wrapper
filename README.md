@@ -1,6 +1,10 @@
 [![Build Status](https://travis-ci.org/thody/cache-wrapper.svg?branch=master)](https://travis-ci.org/thody/cache-wrapper)
 [![Dependency Status](https://gemnasium.com/thody/cache-wrapper.svg)](https://gemnasium.com/thody/cache-wrapper)
 
+## Installation
+
+`npm install cache-wrapper`
+
 ## Usage 
 
 ```
