@@ -43,6 +43,19 @@ describe('Cache Wrapper', function () {
       sinon.assert.calledOnce(spy);
     });
 
+    it('should be able to wrap an individual function', function () {
+      var spy = sinon.spy();
+      var proxiedFunction = cacheWrapper.wrap(function (spy) {
+        spy();
+        return 1;
+      });
+
+      proxiedFunction(spy); // Call underlying method
+      proxiedFunction(spy); // Hit cache
+
+      sinon.assert.calledOnce(spy);
+    });
+
     it('should not hit the cache after the ttl has passed', function () {
       var spy = sinon.spy();
       var options = {ttl: 10};
