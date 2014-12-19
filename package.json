@@ -1,6 +1,6 @@
 {
   "name": "cache-wrapper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Wraps objects with a proxy that caches return values so that resource intensive functions can be called repeatedly at low performance cost.",
   "author": "Adam Thody",
   "repository": {
