@@ -4,7 +4,8 @@
   "description": "Wraps objects with a caching layer so that resource intensive functions can be called repeatedly at low performance cost.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec test"
+    "test": "mocha --reporter spec test",
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000"
   },
   "keywords": [
     "cache"
@@ -12,7 +13,11 @@
   "author": "Adam Thody",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^2.0.1"
+    "mocha": "^2.0.1",
+    "sinon": "^1.12.2",
+    "blanket": "^1.1.6",
+    "mocha-text-cov": "^0.1.0",
+    "istanbul": "^0.3.5"
   },
   "dependencies": {
     "memory-cache": "0.0.5"
