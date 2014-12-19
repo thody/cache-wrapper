@@ -4,7 +4,9 @@
 
 ## Installation
 
-`npm install cache-wrapper`
+```
+npm install cache-wrapper
+```
 
 ## Usage 
 
@@ -21,4 +23,12 @@ var dataStore = {
 
 var proxiedDataStore = cacheWrapper.wrap(dataStore);
 var thing = proxiedDataStore.getThing(1);
+```
+
+### Cache Expiration
+
+A TTL can be set on caches to ensure that cached data doesn't go stale.
+
+```
+var proxiedDataStore = cacheWrapper.wrap(dataStore, { ttl: 5000 }); // Keep for 5000ms
 ```

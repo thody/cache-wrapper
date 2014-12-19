@@ -4,7 +4,7 @@ var sinon = require('sinon');
 
 var cacheWrapper = require('../lib');
 
-var resource = {
+var fakeResource = {
   getStuff: function (spy) {
     spy();
 
@@ -13,14 +13,52 @@ var resource = {
   }
 };
 
+var clock;
+
+before(function (done) {
+  clock = sinon.useFakeTimers();
+  done();
+});
+
+beforeEach(function (done) {
+  // Clear caches between tests or cache will carry over
+  cacheWrapper.clearCaches();
+  done();
+});
+
+afterEach(function (done) {
+  clock.reset();
+  done();
+});
+
 describe('Cache Wrapper', function () {
   describe('#wrap()', function () {
     it('should not call underlying method more than once', function () {
       var spy = sinon.spy();
-      var proxiedResource = cacheWrapper.wrap(resource);
-      proxiedResource.getStuff(spy);
-      proxiedResource.getStuff(spy);
+      var proxiedResource = cacheWrapper.wrap(fakeResource);
+
+      proxiedResource.getStuff(spy); // Call underlying method
+      proxiedResource.getStuff(spy); // Hit cache
+
       sinon.assert.calledOnce(spy);
+    });
+
+    it('should not hit the cache after the ttl has passed', function () {
+      var spy = sinon.spy();
+      var options = {ttl: 10};
+      var proxiedResource = cacheWrapper.wrap(fakeResource, options);
+
+      // Call method twice before ttl expires
+      proxiedResource.getStuff(spy); // Call underlying method
+      proxiedResource.getStuff(spy); // Hit cache
+
+      // Wait for ttl to expire
+      clock.tick(options.ttl + 1);
+
+      // Try again
+      proxiedResource.getStuff(spy); // Call underlying method again
+
+      sinon.assert.calledTwice(spy);
     });
   });
 });
