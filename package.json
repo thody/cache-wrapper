@@ -2,6 +2,11 @@
   "name": "cache-wrapper",
   "version": "0.0.2",
   "description": "Wraps objects with a proxy that caches return values so that resource intensive functions can be called repeatedly at low performance cost.",
+  "author": "Adam Thody",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thody/cache-wrapper.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec test && ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000",
@@ -10,7 +15,7 @@
   "keywords": [
     "cache", "proxy"
   ],
-  "author": "Adam Thody",
+
   "license": "MIT",
   "devDependencies": {
     "mocha": "^2.0.1",
