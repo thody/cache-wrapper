@@ -1,5 +1,6 @@
 [![Build Status](https://img.shields.io/travis/thody/cache-wrapper.svg)](https://travis-ci.org/thody/cache-wrapper)
 [![Dependency Status](https://gemnasium.com/thody/cache-wrapper.svg)](https://gemnasium.com/thody/cache-wrapper)
+[![npm version](https://img.shields.io/npm/v/cache-wrapper.svg)](https://www.npmjs.com/package/cache-wrapper)
 
 ## Installation
 
