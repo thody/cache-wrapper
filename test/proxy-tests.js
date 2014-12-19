@@ -2,7 +2,7 @@ require('blanket');
 var assert = require('assert');
 var sinon = require('sinon');
 
-var cachingProxy = require('../lib');
+var cacheWrapper = require('../lib');
 
 var resource = {
   getStuff: function (spy) {
@@ -13,11 +13,11 @@ var resource = {
   }
 };
 
-describe('Caching Proxy', function () {
-  describe('#proxy()', function () {
+describe('Cache Wrapper', function () {
+  describe('#wrap()', function () {
     it('should not call underlying method more than once', function () {
       var spy = sinon.spy();
-      var proxiedResource = cachingProxy.proxy(resource);
+      var proxiedResource = cacheWrapper.wrap(resource);
       proxiedResource.getStuff(spy);
       proxiedResource.getStuff(spy);
       sinon.assert.calledOnce(spy);

@@ -1,17 +1,16 @@
-[![Build Status](https://travis-ci.org/thody/caching-proxy.svg?branch=master)](https://travis-ci.org/thody/caching-proxy)
-[![Dependency Status](https://gemnasium.com/thody/caching-proxy.svg)](https://gemnasium.com/thody/caching-proxy)
-[![Coverage Status](https://img.shields.io/coveralls/thody/caching-proxy.svg)](https://coveralls.io/r/thody/caching-proxy)
+[![Build Status](https://travis-ci.org/thody/cache-wrapper.svg?branch=master)](https://travis-ci.org/thody/cache-wrapper)
+[![Dependency Status](https://gemnasium.com/thody/cache-wrapper.svg)](https://gemnasium.com/thody/cache-wrapper)
 
 ## Usage 
 
 ```
-var cachingProxy = require('caching-proxy');
+var cacheWrapper = require('cache-wrapper');
 var dataStore = {
     getThing: function (id) {
         // Do something resource intensive
     }
 };
 
-var proxiedDataStore = cachingProxy.proxy(dataStore);
+var proxiedDataStore = cacheWrapper.wrap(dataStore);
 var thing = proxiedDataStore.getThing(1);
 ```
