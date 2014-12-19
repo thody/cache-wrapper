@@ -1,6 +1,6 @@
 {
   "name": "cache-wrapper",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Wraps objects with a caching layer so that resource intensive functions can be called repeatedly at low performance cost.",
   "main": "index.js",
   "scripts": {
